@@ -7,7 +7,16 @@ module.exports = class WebpackGenerator extends Generator {
 	constructor(args, opts) {
 		super(args, opts);
 		opts.env.configuration = {
+			common: {
+				configName: 'common',
+				webpackOptions: {}
+			},
 			dev: {
+				configName: 'dev',
+				webpackOptions: {}
+			},
+			prod: {
+				configName: 'prod',
 				webpackOptions: {}
 			}
 		};
